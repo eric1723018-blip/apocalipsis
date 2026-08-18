@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apocalipsis 3:5-11 | Reflexión</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background:
+                linear-gradient(rgba(250,249,246,0.93), rgba(250,249,246,0.93)),
+                url('https://images.unsplash.com/photo-1507692049790-de58290a4334?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #2c2c2c;
+            line-height: 1.8;
+            display: flex;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 100vh;
+            background: #161616;
+            border-right: 1px solid #d4af37;
+            padding: 3rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1.5rem;
+            display: block;
+        }
+
+        nav ul {
+            list-style: none;
+            margin-top: 3rem;
+        }
+
+        nav ul li {
+            margin-bottom: 1.8rem;
+        }
+
+        nav ul li a {
+            color: #999;
+            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            transition: 0.4s;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            color: #d4af37;
+            transform: translateX(5px);
+        }
+
+        .credito-menu {
+            color: #555;
+            font-size: 0.8rem;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        main {
+            margin-left: 260px;
+            width: calc(100% - 260px);
+        }
+
+        section {
+            padding: 6rem 4rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        #inicio {
+            max-width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            background:
+                linear-gradient(rgba(10,30,60,0.45), rgba(10,30,60,0.7)),
+                url('https://images.unsplash.com/photo-1519817650390-64a93db51149?auto=format&fit=crop&w=1800&q=85')
+                center/cover;
+
+            color: white;
+            padding: 2rem;
+        }
+
+        #inicio h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 4px;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 10px black;
+        }
+
+        #inicio p {
+            font-size: 1.4rem;
+            font-style: italic;
+            background: rgba(0,0,0,0.35);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 1px;
+            background: #d4af37;
+            margin-top: 0.8rem;
+        }
+
+        .bloque {
+            background: rgba(255,255,255,0.88);
+            padding: 3rem;
+            border-radius: 5px;
+            border: 1px solid #e8e5dd;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+            backdrop-filter: blur(5px);
+        }
+
+        .texto {
+            font-size: 1.18rem;
+            text-align: justify;
+            margin-bottom: 1.7rem;
+        }
+
+        .principal {
+            font-size: 2rem;
+            font-style: italic;
+            text-align: center;
+            padding: 2.5rem;
+            margin: 2.5rem 0;
+            background: #fffbf2;
+            border-top: 1px solid #eaddbd;
+            border-bottom: 1px solid #eaddbd;
+            box-shadow: 0 4px 15px rgba(212,175,55,0.1);
+        }
+
+        .cita {
+            display: block;
+            margin-top: 1rem;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            font-style: normal;
+            letter-spacing: 2px;
+            color: #a4821a;
+        }
+
+        .reflexion {
+            background: linear-gradient(
+                135deg,
+                rgba(255,251,242,0.95),
+                rgba(255,255,255,0.95)
+            );
+            border-left: 4px solid #d4af37;
+        }
+
+        .reflexion p {
+            font-size: 1.17rem;
+            text-align: justify;
+            margin-bottom: 1.5rem;
+        }
+
+        .reflexion strong {
+            color: #9a7817;
+        }
+
+        .pregunta {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: #f4f0e5;
+            border-radius: 5px;
+            font-style: italic;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        .conclusion {
+            text-align: center;
+        }
+
+        .conclusion p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .frase-final {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #8b6b15;
+            margin-top: 2rem;
+        }
+
+        footer {
+            background: #161616;
+            color: #888;
+            text-align: center;
+            padding: 3rem;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.85rem;
+            border-top: 1px solid #333;
+        }
+
+        @media (max-width: 900px) {
+
+            body {
+                flex-direction: column;
+                background-attachment: scroll;
+            }
+
+            header {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 1.5rem;
+                border-right: none;
+                border-bottom: 1px solid #d4af37;
+            }
+
+            .logo {
+                text-align: center;
+                border: none;
+            }
+
+            nav ul {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 1rem;
+            }
+
+            nav ul li {
+                margin: 0.5rem 1rem;
+            }
+
+            .credito-menu {
+                display: none;
+            }
+
+            main {
+                margin-left: 0;
+                width: 100%;
+            }
+
+            section {
+                padding: 4rem 1.5rem;
+            }
+
+            #inicio h1 {
+                font-size: 2.3rem;
+            }
+
+            #inicio p {
+                font-size: 1.1rem;
+            }
+
+            .bloque {
+                padding: 1.5rem;
+            }
+
+            .principal {
+                font-size: 1.5rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <nav>
+
+        <a href="#inicio" class="logo">Scriptura</a>
+
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#versiculos">Versículos</a></li>
+            <li><a href="#explicacion">Explicación</a></li>
+            <li><a href="#reflexion">Reflexión</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="credito-menu">
+        Apocalipsis 3:5-11
+    </div>
+
+</header>
+
+<main>
+
+    <section id="inicio">
+
+        <h1>Apocalipsis 3:8</h1>
+
+        <p>
+            Una puerta abierta que nadie puede cerrar
+        </p>
+
+    </section>
+
+
+    <section id="versiculos">
+
+        <h2>Los Versículos</h2>
+
+        <div class="bloque">
+
+            <p class="texto">
+                <strong>Apocalipsis 3:5</strong><br>
+                El que venciere será vestido de vestiduras blancas;
+                y no borraré su nombre del libro de la vida, y confesaré
+                su nombre delante de mi Padre y delante de sus ángeles.
+            </p>
+
+            <p class="texto">
+                <strong>Apocalipsis 3:6</strong><br>
+                El que tiene oído, oiga lo que el Espíritu dice a las iglesias.
+            </p>
+
+            <p class="texto">
+                <strong>Apocalipsis 3:7</strong><br>
+                Escribe al ángel de la iglesia en Filadelfia: Esto dice el Santo,
+                el Verdadero, el que tiene la llave de David, el que abre y
+                ninguno cierra, y cierra y ninguno abre.
+            </p>
+
+
+            <div class="principal">
+
+                “He aquí, he puesto delante de ti una puerta abierta,
+                la cual nadie puede cerrar; porque aunque tienes poca
+                fuerza, has guardado mi palabra, y no has negado mi nombre.”
+
+                <span class="cita">
+                    — Apocalipsis 3:8
+                </span>
+
+            </div>
+
+
+            <p class="texto">
+                <strong>Apocalipsis 3:9</strong><br>
+                He aquí, yo entrego de la sinagoga de Satanás a los que se
+                dicen ser judíos y no lo son, sino que mienten; he aquí,
+                yo haré que vengan y se postren a tus pies, y reconozcan
+                que yo te he amado.
+            </p>
+
+            <p class="texto">
+                <strong>Apocalipsis 3:10</strong><br>
+                Por cuanto has guardado la palabra de mi paciencia, yo también
+                te guardaré de la hora de la prueba que ha de venir sobre el
+                mundo entero, para probar a los que moran sobre la tierra.
+            </p>
+
+            <p class="texto">
+                <strong>Apocalipsis 3:11</strong><br>
+                He aquí, yo vengo pronto; retén lo que tienes, para que ninguno
+                tome tu corona.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="explicacion">
+
+        <h2>¿Qué significa?</h2>
+
+        <div class="bloque">
+
+            <p class="texto">
+                Este mensaje fue dirigido a la iglesia de Filadelfia.
+                Jesús reconoce que, aunque tenían poca fuerza,
+                permanecieron fieles a su palabra.
+            </p>
+
+            <p class="texto">
+                La expresión <strong>“una puerta abierta”</strong>
+                representa una oportunidad que Dios coloca delante
+                de ellos. Es una imagen de esperanza, misión y
+                posibilidades que vienen de parte de Dios.
+            </p>
+
+            <p class="texto">
+                También encontramos una enseñanza muy importante:
+                no siempre necesitamos sentirnos fuertes para
+                permanecer firmes en nuestra fe.
+            </p>
+
+            <p class="texto">
+                La iglesia tenía “poca fuerza”, pero continuaba
+                confiando en Dios. Su fidelidad era más importante
+                que su propia capacidad.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section id="reflexion">
+
+        <h2>Reflexión</h2>
+
+        <div class="bloque reflexion">
+
+            <p>
+                Hay momentos en los que podemos sentir que no somos
+                suficientemente fuertes, inteligentes o capaces.
+                Podemos pensar que nuestros problemas son demasiado
+                grandes y que las oportunidades están fuera de nuestro
+                alcance.
+            </p>
+
+            <p>
+                Pero Apocalipsis 3:8 nos recuerda que
+                <strong>nuestra debilidad no significa que Dios haya
+                terminado su obra en nosotros.</strong>
+            </p>
+
+            <p>
+                La iglesia de Filadelfia tenía poca fuerza, pero
+                permaneció fiel. Esto nos enseña que Dios puede trabajar
+                incluso cuando nosotros sentimos que tenemos muy poco
+                para ofrecer.
+            </p>
+
+            <p>
+                Tal vez hoy tengas delante de ti una oportunidad:
+                comenzar algo nuevo, mejorar tus estudios, cambiar una
+                actitud, acercarte más a Dios o ayudar a alguien.
+                No permitas que el miedo te haga pensar que no puedes.
+            </p>
+
+            <p>
+                Si Dios abre una puerta, nuestra responsabilidad es
+                caminar con fe, mantenernos firmes y confiar en Él.
+            </p>
+
+            <div class="pregunta">
+
+                ¿Estoy dejando que el miedo cierre una puerta que
+                Dios podría estar abriendo delante de mí?
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="conclusion">
+
+        <h2>Para llevar contigo</h2>
+
+        <div class="bloque conclusion">
+
+            <p>
+                Apocalipsis 3:8 nos enseña que no debemos medir nuestras
+                posibilidades solamente por nuestras propias fuerzas.
+            </p>
+
+            <p>
+                Aunque podamos sentirnos débiles, podemos permanecer
+                fieles y confiar en que Dios tiene el control.
+            </p>
+
+            <p class="frase-final">
+                “Si Dios abre una puerta, no tengas miedo de caminar
+                hacia ella con fe.”
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        <p>
+            Scriptura · Reflexión sobre la Palabra de Dios
+        </p>
+
+        <p>
+            Apocalipsis 3:5-11
+        </p>
+
+        <p>
+            @Erica · Derechos reservados
+        </p>
+
+    </footer>
+
+</main>
+
+</body>
+</html>
